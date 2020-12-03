@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:text="@string/hotensinhvien"
+            android:textAllCaps="false"
+            />
+        <EditText
+            android:id="@+id/edhotensinhvien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <TextView
+
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ngaysinh"
+            android:textAllCaps="false"
+            />
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/editText_date"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/button_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            app:layout_constraintStart_toEndOf="@+id/editText_date"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </LinearLayout>
+    <CheckBox
+        android:layout_marginLeft="250dp"
+        android:id="@+id/checkBox_isSpinnerMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spinner Mode"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hình Ảnh Đại Diện: "
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/imgeChonHinh"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/btnChonAnh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Chọn Ảnh"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:background="#00BCD4"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnThem"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/them"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:background="#00BCD4"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/danhsachsinhvien"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDanhsachsinhvien"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</android.widget.LinearLayout>
